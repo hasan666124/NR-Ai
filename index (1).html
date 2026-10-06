@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NR Ai — আপনার ব্যক্তিগত AI সঙ্গী</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== স্ক্রিন ১: Welcome / Onboarding ===== -->
+<section id="screenOnboarding" class="screen active">
+  <div class="onboard-wrap">
+    <div class="orb orb-idle orb-big">
+      <div class="orb-core">NR</div>
+    </div>
+    <h1 class="app-title">NR <span class="accent">Ai</span></h1>
+    <p class="tagline">আপনার ব্যক্তিগত AI সঙ্গী</p>
+
+    <input type="text" id="nameInput" class="name-input" placeholder="আপনার নাম লিখুন">
+
+    <button id="getStartedBtn" class="primary-btn">Get Started →</button>
+  </div>
+</section>
+
+<!-- ===== স্ক্রিন ২-৪: হোম (Idle / Listening / Speaking) ===== -->
+<section id="screenHome" class="screen">
+  <header class="app-header">
+    <div class="brand-mini">
+      <span class="brand-mini-mark">NR</span>
+      <span class="brand-mini-name">NR Ai</span>
+    </div>
+    <button class="icon-btn" id="settingsBtn" aria-label="সেটিংস">⚙️</button>
+  </header>
+
+  <div class="home-center">
+    <div class="orb orb-idle orb-big" id="mainOrb">
+      <div class="orb-core">NR</div>
+    </div>
+    <p class="status-text" id="statusText">Sun rahi hoon...</p>
+    <div class="waveform" id="waveform"></div>
+  </div>
+
+  <div class="control-row">
+    <button class="control-btn" id="muteBtn" aria-label="মিউট">🔇</button>
+    <button class="mic-btn" id="micBtn" aria-label="মাইক্রোফোন">🎤</button>
+    <button class="control-btn" id="chatHistoryBtn" aria-label="চ্যাট হিস্ট্রি">💬</button>
+  </div>
+</section>
+
+<!-- ===== স্ক্রিন ৫: চ্যাট হিস্ট্রি ===== -->
+<section id="screenChat" class="screen">
+  <header class="app-header">
+    <button class="icon-btn" id="chatBackBtn" aria-label="ফিরে যান">←</button>
+    <span class="chat-title">কথোপকথন</span>
+    <span style="width:38px;"></span>
+  </header>
+
+  <div class="chat-list" id="chatList">
+    <!-- JS দিয়ে চ্যাট মেসেজ এখানে বসবে -->
+  </div>
+
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" class="chat-input" placeholder="মেসেজ লিখুন...">
+    <button class="chat-icon-btn" id="chatMicBtn" aria-label="ভয়েস">🎤</button>
+    <button class="chat-send-btn" id="chatSendBtn" aria-label="পাঠান">➤</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
