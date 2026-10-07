@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="NR Ai — আপনার ব্যক্তিগত AI সহকারী">
+<link rel="manifest" href="manifest.webmanifest">
+<title>NR Ai — আপনার ব্যক্তিগত AI সঙ্গী</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="screenOnboarding" class="screen active">
+<div class="onboard-wrap"><div class="orb orb-idle orb-big"><div class="orb-core">NR</div></div><h1 class="app-title">NR <span class="accent">Ai</span></h1><p class="tagline">আপনার ব্যক্তিগত AI সঙ্গী</p><input id="nameInput" class="name-input" type="text" placeholder="আপনার নাম লিখুন" autocomplete="name"><button id="getStartedBtn" class="primary-btn">Get Started →</button></div>
+</section>
+<section id="screenHome" class="screen">
+<header class="app-header"><div class="brand-mini"><span class="brand-mini-mark">NR</span><span class="brand-mini-name">NR Ai</span></div><button class="icon-btn" id="settingsBtn" aria-label="সেটিংস">⚙️</button></header>
+<div class="home-center"><div class="orb orb-idle orb-big" id="mainOrb"><div class="orb-core">NR</div></div><p class="welcome-user" id="welcomeUser"></p><p class="status-text" id="statusText">শুনছি...</p><div class="waveform" id="waveform"></div></div>
+<div class="control-row"><button class="control-btn" id="muteBtn" aria-label="মিউট">🔇</button><button class="mic-btn" id="micBtn" aria-label="মাইক্রোফোন">🎤</button><button class="control-btn" id="chatHistoryBtn" aria-label="চ্যাট হিস্ট্রি">💬</button></div>
+</section>
+<section id="screenChat" class="screen">
+<header class="app-header"><button class="icon-btn" id="chatBackBtn">←</button><span class="chat-title">কথোপকথন</span><span class="header-spacer"></span></header>
+<div class="chat-list" id="chatList"></div><div class="chat-input-row"><input id="chatInput" class="chat-input" placeholder="মেসেজ লিখুন..." autocomplete="off"><button class="chat-icon-btn" id="chatMicBtn">🎤</button><button class="chat-send-btn" id="chatSendBtn">➤</button></div>
+</section>
+<section id="screenSettings" class="screen">
+<header class="app-header"><button class="icon-btn" id="settingsBackBtn">←</button><span class="chat-title">সেটিংস</span><span class="header-spacer"></span></header>
+<div class="settings-list"><label class="setting-card">আপনার নাম<input id="settingsName" class="chat-input" placeholder="নাম"></label><label class="setting-card setting-row"><span>AI কণ্ঠ</span><input id="voiceToggle" type="checkbox" checked></label><button class="danger-btn" id="clearChatBtn">সব কথোপকথন মুছে দিন</button></div>
+</section>
+<script src="app.js"></script>
+</body></html>
